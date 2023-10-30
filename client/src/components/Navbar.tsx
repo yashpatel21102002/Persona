@@ -25,21 +25,21 @@ export default function Navbar(){
 
     return (
         <>
-        <div className={`flex w-full sticky bg-dark-green top-0 justify-center items-start pt-5 ${isopen ? "bg-black":""}`}>
-            <div className={`flex w-full justify-between items-start text-white max-md:px-2` }>
+        <div className={`flex w-full sticky bg-white top-0 justify-center items-start pt-5 ${isopen ? "bg-black":""}`}>
+            <div className={`flex w-full justify-between items-start text-[black] max-md:px-2` }>
                 <div>
                     <h2 className="text-xl font-bold">YASH PATEL</h2>
                 </div>
                 <div className={styles.options}>
                     {
                         options.map((item)=>{
-                            return (<Link href={item.href} key={item.title} className="hover:text-light hover:animate-bounce">{item.title}</Link>)
+                            return (<Link href={item.href} key={item.title} className="hover:text-light hover:animate-bounce" >{item.title}</Link>)
                         })
                     }
                     
                 </div>
                
-                <div className="lg:hidden text-3xl text-white items-center flex  cursor-pointer">
+                <div className="lg:hidden text-3xl text-[black] items-center flex  cursor-pointer">
                     {
                     isopen ? (
                         <RxCross2 onClick = {closeButten}/>
@@ -50,7 +50,7 @@ export default function Navbar(){
             </div>
             
         </div>
-        <div className="bg-black justify-center items-center text-white " >
+        <div className="bg-black justify-center items-center text-[black] " >
         {
             isopen && (
                 <div className="flex flex-col justify-center items-center py-8 gap-8 bg-black">
